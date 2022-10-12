@@ -13,9 +13,9 @@ echo.
 set /p repositlink="Paste the reposit's link here > "
 git remote add origin "%repositlink%"
 :U
-if "%szam%==4" (goto :end)
+if "%szam%"=="4" (goto :end)
 git push -u origin main
-if not "%errorlevel%==0" (
+if not "%errorlevel%"=="0" (
     echo.
     echo Retrying..
     set /a %szam%=%szam%+1
