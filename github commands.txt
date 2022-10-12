@@ -1,0 +1,10 @@
+git clone "link"
+
+Feltöltés:
+git status
+git add .
+git commit -m "valami"
+git push
+
+Letöltés:
+git pull
