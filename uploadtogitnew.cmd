@@ -12,16 +12,6 @@ start https://github.com/HelloandMore?tab=repositories
 echo.
 set /p repositlink="Paste the reposit's link here > "
 git remote add origin "%repositlink%"
-:U
-if "%szam%"=="4" (goto :end)
 git push -u origin main
-if not "%errorlevel%"=="0" (
-    echo.
-    echo Retrying..
-    set /a %szam%=%szam%+1
-    echo Attempt number %szam%
-    goto :U
-)
-:end
 pause
 exit /b %errorlevel%
