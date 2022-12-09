@@ -1,7 +1,7 @@
 @echo off
 git status
 git add .
-git commit -m "Python %date%"
+git commit -m " orai Python %date%"
 git push
 echo.
 net helpmsg %errorlevel%
