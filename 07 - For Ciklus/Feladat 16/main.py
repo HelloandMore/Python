@@ -1,17 +1,17 @@
-start: int = 0
-end: int = 0
+szam1: int = 0
+szam2: int = 0
 osszeg1: int = 0
 osszeg2: int = 0
 mennyiseg1: int = 1
 mennyiseg2: int = 1
 print("--------------------------")
 print("Adja meg a kezdő értéket: ", end='')
-start = int(input())
+szam1 = int(input())
 print("Adja meg a végső értéket: ", end='')
-end = int(input())
+szam2 = int(input())
 
-if start > end:
-    for i in range(start, end-1, -1):
+if szam1 > szam2:
+    for i in range(szam1, szam2 - 1, -1):
         if i%2== 0:
             osszeg1 += i
             mennyiseg1 += 1
@@ -21,8 +21,8 @@ if start > end:
     print(f"Páros zsámok átlaga: {osszeg1/mennyiseg1}")
     print(f"Páratlan számok összege: {osszeg2/mennyiseg2}")
 
-else: 
-    for i in range(end, start-1, -1):
+elif szam2 > szam1: 
+    for i in range(szam2, szam1 - 1, -1):
         if i%2 == 0:
             osszeg1 += i
             mennyiseg1 += 1
@@ -31,3 +31,5 @@ else:
             mennyiseg2 += 1
     print(f"Páros zsámok átlaga: {osszeg1/mennyiseg1}")
     print(f"Páratlan számok összege: {osszeg2/mennyiseg2}")
+else:
+    print("A két szám egyenlő, vagy érvénytelen!")
