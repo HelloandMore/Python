@@ -1,22 +1,22 @@
 from os import system
 
-szam1: int = None
-szam2: int = None
+kezdo: int = None
+vegso: int = None
 
 print("Adja meg a kezdőértéket > ", end="")
-szam1 = int(input())
+kezdo = int(input())
 system('echo.')
 
 print("Adja meg a záróértéket > ", end="")
-szam2 = int(input())
+vegso = int(input())
 system('echo.')
 
 print("A számok közöttük csökkenő sorrendben:")
 
-if szam1>szam2:
-    for i in range(szam1, szam2 + 1, -1):
+if kezdo>vegso:
+    for i in range(kezdo, vegso + 1, -1):
         print(i)
 
-if szam2>szam1:
-    for i in range(szam2, szam1 + 1, -1):
+if vegso>kezdo:
+    for i in range(vegso, kezdo + 1, -1):
         print(i)
