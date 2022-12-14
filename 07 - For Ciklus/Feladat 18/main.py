@@ -7,9 +7,9 @@ elso: bool = True
 
 print("--------------------------")
 print("Adja meg a kezdő értéket: ", end='')
-kezdo = int(input())
+kezdo = int(input().strip())
 print("Adja meg a végső értéket: ", end='')
-vegso = int(input())
+vegso = int(input().strip())
 
 if kezdo > vegso:
     for i in range(vegso, kezdo + 1, 1):

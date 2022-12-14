@@ -4,22 +4,30 @@ kezdo: int = None
 vegso: int = None
 
 print("Adja meg a kezdőértéket > ", end="")
-kezdo = int(input())
+kezdo = int(input().strip())
 system('echo.')
 
 print("Adja meg a záróértéket > ", end="")
-vegso = int(input())
+vegso = int(input().strip())
 system('echo.')
 
 print("A páratlan számok közöttük növekső sorrendben:")
 
 if kezdo>vegso:
-    for i in range(vegso, kezdo + 1, 1):
-        if not i%2 == 0:
+    if not kezdo%2 == 0:
+        kezdo += 1
+        for i in range(vegso, kezdo + 1, 2):
+            print(i)
+    else:
+        for i in range(vegso, kezdo + 1, 2):
             print(i)
 
 
 if vegso>kezdo:
-    for i in range(kezdo, vegso + 1, 1):
-        if not i%2 == 0:
+    if not kezdo%2 == 0:
+        kezdo += 1
+        for i in range(kezdo, vegso + 1, 2):
+            print(i)
+    else:
+        for i in range(kezdo, vegso + 1, 2):
             print(i)

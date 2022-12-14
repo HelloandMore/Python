@@ -6,11 +6,11 @@ osszeg: int = 0
 osszeg2: int = 1
 
 print("Adja meg a kezdőértéket > ", end="")
-kezdo = int(input())
+kezdo = int(input().strip())
 system('echo.')
 
 print("Adja meg a záróértéket > ", end="")
-vegso = int(input())
+vegso = int(input().strip())
 system('echo.')
 
 if kezdo > vegso:

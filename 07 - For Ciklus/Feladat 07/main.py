@@ -4,11 +4,11 @@ kezdo: int = None
 vegso: int = None
 
 print("Adja meg a kezdőértéket > ", end="")
-kezdo = int(input())
+kezdo = int(input().strip())
 system('echo.')
 
 print("Adja meg a záróértéket > ", end="")
-vegso = int(input())
+vegso = int(input().strip())
 system('echo.')
 
 print("A számok közöttük csökkenő sorrendben:")
